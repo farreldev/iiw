@@ -1,0 +1,12 @@
+.cont {
+   overflow: auto;
+   -webkit-overflow-scrolling: touch;
+   ul {
+      display: table-row;
+         li {
+            display: table-cell;
+            padding:20px;
+            &.active{border: 1px solid blue;}
+         }
+      }
+}

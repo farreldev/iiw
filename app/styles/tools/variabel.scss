@@ -1,0 +1,68 @@
+// FONT FAMILY
+$font_idx: 1;
+$font_default: Helvetica, Arial, sans-serif !default;
+
+// Font Family Ex. (name, 'fonts/path')
+$font_family: (
+    adelle_sanslight: 'fonts/adellesans-light-webfont',
+    adelle_sanslight_italic: 'fonts/adellesans-lightitalic-webfont',
+    adelle_sansregular: 'fonts/adellesans-regular-webfont',
+    adelle_sansbold: 'fonts/adellesans-bold-webfont',
+    adelle_sanssemibold: 'fonts/adellesans-semibold-webfont',
+    adelle_sansextrabold: 'fonts/adellesans-extrabold-webfont',
+    roboto_light: 'fonts/roboto-light-webfont',
+    roboto_black: 'fonts/roboto-black-webfont',
+);
+
+// BUTTONS
+// Default Button Ex. (button-class, background-code, font-color)
+$buttons:
+    ('btn-red', #D9534F, #FFFFFF),
+    ('btn-blue', #00aeef, #FFFFFF),
+    ('btn-orange', #f47920, #FFFFFF),
+    ('btn-abu', #eeeeee, #333333),
+    ('btn-abu-gelap', #aaaaaa, #FFFFFF),
+    ('btn-green', #5CB85C, #FFFFFF);
+
+
+// Color
+
+$hitam: #333333;
+$ungu: #5f2c87;
+$orange: #f15a29;
+$orange-muda: #f99c1c;
+$abu: #ccc;
+$abu-muda: #ddd;
+$abu-terang: #ebebeb;
+
+$tw: #00aaeb;
+$fb: #445f9f;
+$gp: #f83e2c;
+$lnkdn: #007ebb;
+
+// text-align
+$align: left center right;
+
+// vertical-align
+$vertical-align: top middle bottom;
+
+// float
+$float: left right;
+
+// position
+$position: top right bottom left;
+
+// media-query
+$media-query:
+    (retina, (min-width: 1920px)),
+    (big-desk, (min-width: 1600px)),
+    (laptop, (min-width: 1366px)),
+    (desktop, (min-width: 1200px)),
+    (wide, (min-width: 992px)),
+    (ipadPro, (width: 1024px) and (height: 1366px)),
+    (ipad, (width: 1024px)),
+    (tablet, (min-width: 768px) and (max-width: 991px)),
+    (mobile, (max-width: 767px)),
+    (mobile-landscape, (min-height: 320px) and (max-height: 414px)),
+    (small-mobile, (max-width: 320px)),
+    (iPhone5-height, (max-height: 480px));

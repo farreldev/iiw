@@ -1,0 +1,126 @@
+section.motion {
+   .big-screen {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      background-color: salmon;
+      iframe {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+      }
+      @include breakpoint(tablet) {
+         margin-bottom: 20px;
+      }
+      @include breakpoint(mobile) {
+         margin-bottom: 20px;
+      }
+   }
+   .list-motion {
+      width: 100%;
+      height: 410px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      ul {
+         margin: 0;
+         li {
+            margin-bottom: 18px;
+            display: block;
+            transition: all .3s ease-in-out;
+            a {
+               position: relative;
+               display: block;
+               cursor: pointer;
+               @include clearit;
+               figure {
+                  display: inline-block;
+                  width: 163px;
+                  margin-right: 15px;
+                  img {
+                     vertical-align: top;
+                     width: 100%;
+                     height: auto;
+                  }
+               }
+               p {
+                  float: right;
+                  font-family: Roboto;
+                  font-weight: 500;
+                  font-size: 19px;
+                  line-height: 1.4;
+                  color: $orange;
+                  width: calc(100% - 178px);
+               }
+            }
+            &:last-child {
+               margin-bottom: 0;
+            }
+            &.active {
+            }
+         }
+      }
+      @include breakpoint(ipadPro) {
+         height: 336px;
+      }
+      @include breakpoint(tablet) {
+         width: 100%;
+         overflow-x: auto;
+         overflow-y: hidden;
+         -webkit-overflow-scrolling: touch;
+         height: auto;
+         ul {
+            white-space: nowrap;
+            display: block;
+            li {
+               margin-right: 10px;
+               width: 75%;
+               display: inline-block;
+               a {
+                  figure {
+                     display: block;
+                     margin-right: 0;
+                     width: 100%;
+                  }
+                  p {
+                     float: none;
+                     width: 100%;
+                     display: block;
+                     white-space: pre-wrap;
+                  }
+               }
+            }
+         }
+      }
+      @include breakpoint(mobile) {
+         width: 100%;
+         overflow-x: auto;
+         overflow-y: hidden;
+         -webkit-overflow-scrolling: touch;
+         height: auto;
+         ul {
+            white-space: nowrap;
+            display: block;
+            li {
+               margin-right: 10px;
+               width: 75%;
+               display: inline-block;
+               a {
+                  figure {
+                     display: block;
+                     margin-right: 0;
+                     width: 100%;
+                  }
+                  p {
+                     float: none;
+                     width: 100%;
+                     display: block;
+                     white-space: pre-wrap;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

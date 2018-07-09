@@ -1,0 +1,63 @@
+ul.iiw-sosmed {
+   padding: 7px 0;
+   display: inline-block;
+   li {
+      display: inline-block;
+      vertical-align: middle;
+      &:nth-child(1) {
+         span {
+            font-family: Roboto;
+            font-weight: 300;
+            font-size: 14px;
+         }
+      }
+      a {
+         padding: 3px 4px;
+         i {
+            font-size: 18px;
+         }
+         &.fb-official {
+            i { color: $fb}
+         }
+         &.tw {
+            i { color: $tw}
+         }
+         &.gp {
+            i { color: $gp}
+         }
+         &.lnkd {
+            i { color: $lnkdn}
+         }
+         
+      }
+   }
+   &.follow {
+      li {
+         text-align: center;
+         margin-right: 10px;
+         vertical-align: top;
+         a {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            border-radius: 100%;
+            i {
+               line-height: 32px;
+               color: #fff;
+            }
+            &.tw {
+               background-color: $tw
+            }
+            &.fb {
+               background-color: $fb
+            }
+            &.gp {
+               background-color: $gp;
+            }
+            &.lnkdn {
+               background-color: $lnkdn;
+            }
+         }
+      }
+   }
+}

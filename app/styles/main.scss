@@ -1,0 +1,38 @@
+$icon-font-path: '../fonts/';
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/slick-carousel/slick/slick.scss";
+// endbower
+
+// tools
+@import "tools/variabel.scss";
+@import "tools/mixins.scss";
+// end tools
+
+// base
+@import "base/fonts.scss";
+@import "base/helper.scss";
+@import "base/reset.scss";
+// end base
+
+// components
+@import "components/icon-sosmed.scss";
+@import "components/heading.scss";
+@import "components/banner.scss";
+@import "components/slider.scss";
+// End components
+
+// includes
+@import "includes/layout.scss";
+@import "includes/header.scss";
+@import "includes/footer.scss";
+// end includes
+
+// sections
+@import "sections/hero-images.scss";
+@import "sections/motion.scss";
+// end sections
+
+// pages
+@import "pages/index.scss";
+// end pages

@@ -1,0 +1,94 @@
+footer {
+   padding: 25px 0;
+   background-color: #ced3cc;
+   .bottom-logo {
+      display: inline-block;
+      margin-bottom: 20px;
+   }
+   .wrapper-menu-footer {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      @include breakpoint(mobile) {
+         flex-direction: column;
+         .linkFooter {
+            flex-basis: 100%;
+         }
+      }
+      .linkFooter {
+         box-sizing: border-box;
+         flex-basis: 17%;
+         ul {
+            li {
+               a,b,span {
+                  font-family: Roboto;
+                  display: inline-block;
+                  line-height: 1.4;
+                  padding: 5px 0;
+                  color: $hitam;
+               }
+               a {
+                  font-weight: 300;
+                  font-size: 15px;
+               }
+               b,span {
+                  font-weight: 500;
+               }
+            }
+            ul.iiw-sosmed {
+               li {
+                  a {
+                     padding: 0;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+.copyright {
+   text-align: center;
+   padding: 15px 0;
+   background-color: #191a1e;
+   p {
+      margin-right: 8px;
+      display: inline-block;
+      vertical-align: middle;
+      font-family: Roboto;
+      font-weight: 300;
+      line-height: 1.3;
+      font-size: 13px;
+      color: #fff;
+      @include breakpoint(mobile) {
+         margin-bottom: 7px;
+      }
+   }
+   ul {
+      display: inline-block;
+      vertical-align: middle;
+      li {
+         border-left: 1px solid #fff;
+         display: inline-block;
+         a {
+            text-align: center;
+            padding: 0 8px;
+            display: block;
+            font-family: Roboto;
+            line-height: 1.3;
+            font-weight: 300;
+            font-size: 13px;
+            color: #fff;
+         }
+         @include breakpoint(mobile) {
+            &:first-child {
+               border-left: transparent;
+               a {
+                  padding-left: 0;
+                  padding-right: 4px;
+               }
+            }
+         }
+      }
+   }
+}

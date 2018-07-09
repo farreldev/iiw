@@ -1,0 +1,139 @@
+header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 8;
+   transition: top .5s ease-in-out;
+   box-shadow: 0 0 10px rgba(0,0,0,.1);
+   @include clearit;
+   .iiw-navbar {
+      padding: 0;
+      width: 100%;
+      background: rgba(255,255,255,1);
+      background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(96,44,135,1) 50%, rgba(96,44,135,1) 100%);
+      background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(50%, rgba(255,255,255,1)), color-stop(50%, rgba(96,44,135,1)), color-stop(100%, rgba(96,44,135,1)));
+      background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(96,44,135,1) 50%, rgba(96,44,135,1) 100%);
+      background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(96,44,135,1) 50%, rgba(96,44,135,1) 100%);
+      background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(96,44,135,1) 50%, rgba(96,44,135,1) 100%);
+      background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(96,44,135,1) 50%, rgba(96,44,135,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#602c87', GradientType=1 );
+      @include breakpoint(tablet) {
+         background: #fff;
+      }
+      @include breakpoint(mobile) {
+         background: #fff;
+      }
+      .iiw-navbar-left {
+         padding: 20px 10px;
+         background-color: #fff;
+         display: flex;
+         justify-content: space-between;
+         a:nth-child(1) {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+            img {
+               width: 105px;
+            }
+         }
+         a:nth-child(2) {
+            display: flex;
+            flex: 3;
+            align-items: center;
+            justify-content: center;
+            img {
+               width: 200px;
+            }
+         }
+         a:nth-child(3) {
+            display: flex;
+            flex: 2;
+            align-items: center;
+            justify-content: center;
+            img {
+               width: 175px;
+            }
+         }
+         @include breakpoint(mobile) {
+            a {
+               margin-bottom: 10px;
+               &:nth-child(1) {
+                  flex: 1;
+                  img {
+                     width: 80px;
+                  }
+               }
+               &:nth-child(2) {
+                  flex: 3;
+                  img {
+                     width: 100px;
+                  }
+               }
+               &:nth-child(3) {
+                  flex: 2;
+                  img {
+                     width: 96px;
+                  }
+               }
+            }
+         }
+      }
+      .iiw-navbar-right {
+         position: absolute;
+         width: 100%;
+         top: 0;
+         padding: 20px 0;
+         display: block;
+         height: auto;
+         background-color: $ungu;
+         @include breakpoint(mobile) {
+            position: relative;
+            padding: 0;
+         }
+         ul {
+            display: block;
+            padding: 10px 0;
+            padding-left: 20px;
+            @include breakpoint(mobile) {
+               text-align: center;
+               padding: 10px;
+            }
+            li {
+               display: inline-block;
+               a {
+                  padding: 5px 10px;
+                  display: block;
+                  font-family: Roboto;
+                  font-weight: 400;
+                  color: #fff;
+                  @include breakpoint(mobile) {
+                     padding: 2px 5px;
+                     font-size: 14px;
+                  }
+                  @include breakpoint(small-mobile) {
+                     padding: 4px 4px;
+                     font-size: 12px;
+                  }
+               }
+            }
+         }
+      }
+   }
+   .iiw-2nd-head {
+      background-color: #fff;
+   }
+   &.scrollDown {
+      // position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      // padding: 20px 45px;
+      // transition: all .5s ease-in-out;
+      background-color: $ungu;
+      @include breakpoint(mobile) {
+         padding: 0;
+      }
+   }
+}

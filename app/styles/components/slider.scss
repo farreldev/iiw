@@ -1,0 +1,314 @@
+.slide-wrapper {
+   position: relative;
+}
+.arrowNavigation {
+   position: absolute;
+   top: 40%;
+   left: 0;
+   transform: translateY(-40%);
+   width: 100%;
+   z-index: 2;
+   a.prevArrowNav,
+   a.nextArrowNav {
+      position: inherit;
+      text-decoration: none;
+      border-radius: 100%;
+      width: 45px;
+      height: 45px;
+      color: #fff;
+      background-color: $orange-muda;
+      cursor: pointer;
+      &:hover {
+         background-color: $orange;
+      }
+      i {
+         position: inherit;
+         font-size: 1.7rem;
+         line-height: 47px;
+      }
+      &.slick-disabled {
+         cursor: not-allowed;
+         background-color: $abu-muda;
+      }
+   }
+   a.prevArrowNav {
+      left: -50px;
+      i {
+         left: 11px;
+      }
+      @include breakpoint(mobile) {
+         width: 30px;
+         height: 30px;
+         left: -15px;
+         i {
+            font-size: 1.2rem;
+            left: 7px;
+            line-height: 32px;
+         }
+      }
+   }
+   a.nextArrowNav {
+      right: -50px;
+      i {
+         right: 11px;
+      }
+      @include breakpoint(mobile) {
+         width: 30px;
+         height: 30px;
+         right: -15px;  
+         i {
+            font-size: 1.2rem;
+            right: 7px;
+            line-height: 32px;
+         }
+      }
+   }
+}
+
+.slider1 {
+   width: 100%;
+   overflow: hidden;
+   .slick-list {
+      margin: 0 -12px;
+   }
+   .slick-slide {
+      margin: 0 12px;
+   }
+   .item {
+      position: relative;
+      overflow: hidden;
+      padding: 15px 15px 35px 15px;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0,0,0,.12);
+      a {
+         margin-bottom: 10px;
+         display: block;
+         font-family: Roboto;
+         font-weight: 400;
+         font-size: 20px;
+         line-height: 1.4;
+         color: $orange;
+         &:hover {
+            text-decoration: none;
+            color: $orange-muda;
+         }
+      }
+      p {
+         font-family: Roboto;
+         font-weight: 300;
+         line-height: 1.4;
+         font-size: 17px;
+      }
+      &:after {
+         position: absolute;
+         left: -5px;
+         bottom: -14px;
+         content: '';
+         width: 110%;
+         height: 27px;
+         background-color: $orange-muda;
+         transform: rotate(2deg);
+      }
+   }
+}
+
+.slider2 {
+   width: 100%;
+   overflow: hidden;
+   .slick-list {
+      margin: 0 -12px;
+   }
+   .slick-slide {
+      margin: 0 12px;
+   }
+   .item {
+      position: relative;
+      overflow: hidden;
+      border: 5px solid #ddd;
+      box-shadow: 0 0 10px rgba(0,0,0,.12);
+      a {
+         display: block;
+         img {
+            display: block;
+            width: 100%;
+         }
+         &:focus {
+            outline: none;
+         }
+      }
+      p {
+         font-family: Roboto;
+         font-weight: 300;
+         line-height: 1.4;
+         font-size: 17px;
+      }
+   }
+}
+
+.sliderHero {
+   position: relative;
+   width: 100%;
+   height: 320px;
+   // overflow: hidden;
+   @include breakpoint(mobile) {
+      height: 200px;
+   }
+   .slick-list {
+      margin: 0 -15px;
+      @include breakpoint(mobile) {
+         margin: 0 0;
+      }
+   }
+   .slick-slide {
+      margin: 0 15px;
+      @include breakpoint(mobile) {
+         margin: 0 0;
+      }
+   }
+   .slick-dots {
+      position: absolute;
+      right: 0;
+      bottom: -40px;
+      z-index: 7;
+      li {
+         display: inline-block;
+         margin: 0 5px;
+         button {
+            width: 8px;
+            height: 15px;
+            border-radius: 100%;
+            border: none;
+            text-indent: -9999px;
+            background-color: $abu;
+            &:focus {
+               outline: none;
+            }
+         }
+         &.slick-active {
+            button {
+               background-color: $ungu;
+               border: none;
+            }
+         }
+      }
+      @include breakpoint(mobile) {
+         left: 0;
+         right: 0;
+         bottom: -30px;
+         li {
+            margin: 0 3px;
+            button {
+               height: 6px;
+               border-radius: 0;
+            }
+         }
+      }
+   }
+   .item {
+      position: relative;
+      width: auto;
+      height: 320px;
+      overflow: hidden;
+      @include breakpoint(mobile) {
+         height: 200px;
+      }
+      figure {
+         display: inline-block;
+         height: 320px;
+         @include breakpoint(mobile) {
+            overflow: hidden;
+            height: 200px;
+         }
+         img {
+            display: block;
+            width: auto;
+            height: 100%;
+            @include breakpoint(mobile) {
+               width: auto;
+               height: 100%;
+               object-position: -265px 0;
+            }
+         }
+         &:focus {
+            outline: none;
+         }
+      }
+      article {
+         padding-top: 20px;
+         position: absolute;
+         left: 10px;
+         bottom: 10px;
+         text-align: left;
+         display: inline-block;
+         width: 480px;
+         overflow: hidden;
+         z-index: 2;
+         @include breakpoint(mobile) {
+            width: 240px;
+            left: 0;
+            bottom: 0;
+         }
+         p {
+            position: relative;
+            padding: 20px 20px;
+            color: #fff;
+            z-index: 2;
+            &.title {
+               padding-top: 7px;
+               font-family: Roboto;
+               font-weight: 500;
+               font-size: 2.2rem;
+               line-height: 1.1;
+               background-color: $orange-muda;
+               @include breakpoint(mobile) {
+                  font-size: 1.2rem;
+               }
+               &:before {
+                  position: absolute;
+                  content: '';
+                  display: block;
+                  top: -10px;
+                  left: -10px;
+                  transform: rotate(2deg);
+                  width: 110%;
+                  height: 20px;
+                  background-color: $orange-muda;
+                  z-index: 1;
+                  @include breakpoint(mobile) {
+                     top: -14px;
+                  }
+               }
+            }
+            &.desc {
+               font-family: Roboto;
+               font-weight: 300;
+               font-size: 14px;
+               letter-spacing: .7px;
+               background-color: $orange;
+               @include breakpoint(mobile) {
+                  display: none;
+               }
+            }
+         }
+      }
+      p {
+         font-family: Roboto;
+         font-weight: 300;
+         line-height: 1.4;
+         font-size: 17px;
+      }
+   }
+   // &:after {
+   //    position: absolute;
+   //    right: 0;
+   //    bottom: -10px;
+   //    content: '';
+   //    width: 400px;
+   //    height: 10px;
+   //    background-color: $orange;
+   //    @include breakpoint(mobile) {
+   //       width: 100%;
+   //       display: none;
+   //    }
+   // }
+}

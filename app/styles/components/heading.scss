@@ -1,0 +1,53 @@
+h1 {
+	font-family: Roboto;
+	font-weight: 700;
+	font-size: 50px;
+}
+
+h2 {
+	font-family: Roboto;
+	font-weight: 700;
+	font-size: 40px;
+}
+
+h3 {
+   font-family: Roboto;
+   font-weight: 500;
+	font-size: 35px;
+}
+
+h4 {
+   font-family: Roboto;
+   font-weight: 500;
+	font-size: 25px;
+}
+
+h5 {
+   font-family: Roboto;
+   font-weight: 500;
+	font-size: 15px;
+}
+
+strong {
+   position: relative;
+   margin-bottom: 45px;
+   overflow-y: hidden;
+   display: block;
+   height: 4rem;
+   border-bottom: 1px solid #ddd;
+   span {
+      position: absolute;
+      display: inline-block;
+      font-family: Roboto;
+      font-weight: 500;
+      color: $abu-terang;
+      font-size: 5.2rem;
+      @include breakpoint(mobile) {
+         font-size: 3rem;
+         top: 1.7rem;
+      }
+   }
+   @include breakpoint(mobile) {
+      margin-bottom: 30px;
+   }
+}
