@@ -124,10 +124,11 @@
    .item {
       position: relative;
       overflow: hidden;
-      border: 5px solid #ddd;
-      box-shadow: 0 0 10px rgba(0,0,0,.12);
-      a {
+      a:not([class*="title"]) {
+         border: 5px solid #ddd;
+         box-shadow: 0 0 10px rgba(0,0,0,.12);
          display: block;
+         margin-bottom: 10px;
          img {
             display: block;
             width: 100%;
@@ -135,6 +136,13 @@
          &:focus {
             outline: none;
          }
+      }
+      a.title {
+         font-family: Roboto;
+         font-size: 17px;
+         font-weight: 400;
+         line-height: 1.4;
+         color: $orange;
       }
       p {
          font-family: Roboto;
