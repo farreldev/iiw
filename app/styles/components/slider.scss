@@ -36,6 +36,9 @@
       i {
          left: 11px;
       }
+      &.hero {
+         left: 50px;
+      }
       @include breakpoint(mobile) {
          width: 30px;
          height: 30px;
@@ -51,6 +54,9 @@
       right: -50px;
       i {
          right: 11px;
+      }
+      &.hero {
+         right: 50px;
       }
       @include breakpoint(mobile) {
          width: 30px;
@@ -156,26 +162,30 @@
 .sliderHero {
    position: relative;
    width: 100%;
-   height: 320px;
+   height: 500px;
    // overflow: hidden;
+   @include breakpoint(tablet) {
+      height: auto;
+   }
    @include breakpoint(mobile) {
-      height: 200px;
+      height: auto;
    }
    .slick-list {
-      margin: 0 -15px;
+      margin: 0 0;
+      overflow: visible;
       @include breakpoint(mobile) {
          margin: 0 0;
       }
    }
    .slick-slide {
-      margin: 0 15px;
+      margin: 0 0;
       @include breakpoint(mobile) {
          margin: 0 0;
       }
    }
    .slick-dots {
       position: absolute;
-      right: 0;
+      right: 100px;
       bottom: -40px;
       z-index: 7;
       li {
@@ -215,27 +225,30 @@
    .item {
       position: relative;
       width: auto;
-      height: 320px;
-      overflow: hidden;
+      height: 500px;
+      // overflow: hidden;
+      @include breakpoint(tablet) {
+         height: auto;
+      }
       @include breakpoint(mobile) {
-         height: 200px;
+         height: auto;
       }
       figure {
          display: inline-block;
-         height: 320px;
+         height: 500px;
+         overflow: hidden;
+         @include breakpoint(tablet) {
+            overflow: hidden;
+            height: auto;
+         }
          @include breakpoint(mobile) {
             overflow: hidden;
-            height: 200px;
+            height: auto;
          }
          img {
             display: block;
-            width: auto;
-            height: 100%;
-            @include breakpoint(mobile) {
-               width: auto;
-               height: 100%;
-               object-position: -265px 0;
-            }
+            width: 100%;
+            height: auto;
          }
          &:focus {
             outline: none;
@@ -244,15 +257,18 @@
       article {
          padding-top: 20px;
          position: absolute;
-         left: 10px;
-         bottom: 10px;
+         left: 100px;
+         bottom: 0;
          text-align: left;
          display: inline-block;
          width: 480px;
          overflow: hidden;
          z-index: 2;
+         @include breakpoint(tablet) {
+            bottom: 3px;
+         }
          @include breakpoint(mobile) {
-            width: 240px;
+            width: 200px;
             left: 0;
             bottom: 0;
          }
@@ -267,23 +283,24 @@
                font-weight: 500;
                font-size: 2.2rem;
                line-height: 1.1;
+               // background-color: transparentize($orange-muda, .3);
                background-color: $orange-muda;
                @include breakpoint(mobile) {
-                  font-size: 1.2rem;
+                  font-size: 1rem;
                }
                &:before {
                   position: absolute;
                   content: '';
                   display: block;
-                  top: -10px;
+                  top: -7px;
                   left: -10px;
-                  transform: rotate(2deg);
+                  transform: rotate(1.2deg);
                   width: 110%;
-                  height: 20px;
+                  height: 12px;
                   background-color: $orange-muda;
                   z-index: 1;
                   @include breakpoint(mobile) {
-                     top: -14px;
+                     top: -8px;
                   }
                }
             }
@@ -292,9 +309,14 @@
                font-weight: 300;
                font-size: 14px;
                letter-spacing: .7px;
+               // background-color: transparentize($orange, .3);
                background-color: $orange;
+               @include breakpoint(tablet) {
+                  display: none;
+               }
                @include breakpoint(mobile) {
                   display: none;
+                  font-size: 11px;
                }
             }
          }

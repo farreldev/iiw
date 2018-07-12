@@ -9,7 +9,7 @@ const runSequence = require('run-sequence');
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
-let dev = true;
+let dev = false;
 
 gulp.task('views', () => {
   return gulp.src('app/pugs/*.pug')
@@ -96,7 +96,8 @@ gulp.task('extras', () => {
   return gulp.src([
     'app/*',
     '!app/*.html',
-    '!app/*.pug'
+    '!app/pugs',
+    '!app/*.bak'
   ], {
     dot: true
   }).pipe(gulp.dest('dist'));

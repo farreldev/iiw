@@ -107,8 +107,9 @@ $(function () {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		speed: 1500,
+		fade: true,
 		dots: true,
-		autoplay: true,
+		autoplay: false,
 		prevArrow: '#prevHero',
 		nextArrow: '#nextHero',
 		responsive: [{
