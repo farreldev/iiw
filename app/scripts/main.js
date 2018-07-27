@@ -15,9 +15,8 @@ $(function () {
 		infinite: false,
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		autoplaySpeed: 2500,
-		speed: 2000,
-		autoplay: true,
+		autoplay: false,
+		speed: 700,
 		prevArrow: '#prevArtikel',
 		nextArrow: '#nextArtikel',
 		responsive: [{
@@ -26,8 +25,8 @@ $(function () {
 				infinite: false,
 				slidesToShow: 2,
 				slidesToScroll: 1,
-				infinite: true,
 				autoplay: false,
+				speed: 700,
 				prevArrow: '#prevArtikel',
 				nextArrow: '#nextArtikel'
 			}
@@ -39,6 +38,7 @@ $(function () {
 				slidesToShow: 2,
 				slidesToScroll: 1,
 				autoplay: false,
+				speed: 700,
 				prevArrow: '#prevArtikel',
 				nextArrow: '#nextArtikel'
 			}
@@ -50,6 +50,7 @@ $(function () {
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				autoplay: false,
+				speed: 700,
 				prevArrow: '#prevArtikel',
 				nextArrow: '#nextArtikel'
 				}
@@ -59,10 +60,9 @@ $(function () {
 	$('#infograph').slick({
 	infinite: false,
 	slidesToShow: 3,
-	autoplaySpeed: 3000,
-	speed: 1500,
 	slidesToScroll: 1,
-	autoplay: true,
+	autoplay: false,
+	speed: 700,
 	prevArrow: '#prevInfograph',
 	nextArrow: '#nextInfograph',
 	responsive: [{
@@ -71,8 +71,8 @@ $(function () {
 			infinite: false,
 			slidesToShow: 3,
 			slidesToScroll: 1,
-			infinite: true,
 			autoplay: false,
+			speed: 700,
 			prevArrow: '#prevInfograph',
 			nextArrow: '#nextInfograph'
 		}
@@ -84,6 +84,7 @@ $(function () {
 			slidesToShow: 2,
 			slidesToScroll: 1,
 			autoplay: false,
+			speed: 700,
 			prevArrow: '#prevInfograph',
 			nextArrow: '#nextInfograph'
 		}
@@ -95,6 +96,7 @@ $(function () {
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			autoplay: false,
+			speed: 700,
 			prevArrow: '#prevInfograph',
 			nextArrow: '#nextInfograph'
 		}
@@ -106,10 +108,10 @@ $(function () {
 		infinite: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		speed: 1500,
+		autoplay: false,
+		speed: 700,
 		fade: true,
 		dots: true,
-		autoplay: false,
 		prevArrow: '#prevHero',
 		nextArrow: '#nextHero',
 		responsive: [{
@@ -118,8 +120,9 @@ $(function () {
 				infinite: false,
 				slidesToShow: 1,
 				slidesToScroll: 1,
-				infinite: true,
 				autoplay: false,
+				speed: 700,
+				infinite: true,
 				prevArrow: '#prevHero',
 				nextArrow: '#nextHero'
 			}
@@ -131,6 +134,7 @@ $(function () {
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				autoplay: false,
+				speed: 700,
 				prevArrow: '#prevHero',
 				nextArrow: '#nextHero'
 			}
@@ -153,9 +157,8 @@ $(function () {
 		infinite: false,
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		autoplaySpeed: 2500,
-		speed: 2000,
 		autoplay: true,
+		speed: 700,
 		prevArrow: '#prevDataboks',
 		nextArrow: '#nextDataboks',
 		responsive: [{
@@ -164,8 +167,8 @@ $(function () {
 				infinite: false,
 				slidesToShow: 3,
 				slidesToScroll: 1,
-				infinite: true,
 				autoplay: false,
+				speed: 700,
 				prevArrow: '#prevDataboks',
 				nextArrow: '#nextInfograph'
 			}
@@ -177,6 +180,7 @@ $(function () {
 				slidesToShow: 2,
 				slidesToScroll: 1,
 				autoplay: false,
+				speed: 700,
 				prevArrow: '#prevDataboks',
 				nextArrow: '#nextDataboks'
 			}
@@ -188,6 +192,7 @@ $(function () {
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				autoplay: false,
+				speed: 700,
 				prevArrow: '#prevDataboks',
 				nextArrow: '#nextDataboks'
 			}
@@ -210,7 +215,7 @@ $(function () {
 		var activeOuterWidth = isMobile ? active.outerWidth() / 2 : active.outerHeight() / 2;
 		pos = isMobile ? (pos + currScroll - contWidth + activeOuterWidth - 15) : (pos + currScroll - contWidth + activeOuterWidth);
 
-		isMobile ? $('.list-motion').animate({ scrollLeft: pos }, 'slow') : $('.list-motion').animate({ scrollTop: pos }, 'slow');
+		isMobile ? $('.list-motion').animate({ scrollLeft: pos }, 300) : $('.list-motion').animate({ scrollTop: pos }, 300);
 		
 	}
 
@@ -232,11 +237,11 @@ $(function () {
 		if(title == 'home') {
 			$('html, body').animate({
 				scrollTop: 0
-			}, 1500, 'swing');	
+			}, 700, 'swing');	
 		} else {
 			$('html, body').animate({
 				scrollTop: $('#' + title).position().top - (isMobile ? 115 : 145)
-			}, 1500, 'swing');
+			}, 700, 'swing');
 		}
 	});
 	
